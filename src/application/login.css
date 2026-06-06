@@ -1,0 +1,108 @@
+.root{
+    -fx-font-family: "Segoe UI";
+}
+
+.left-pane{
+    -fx-background-color: linear-gradient(to bottom,#009688,#26A69A);
+}
+
+.doctor-icon{
+    -fx-font-size: 60px;
+    -fx-fill: white;
+}
+
+.app-title{
+    -fx-font-size: 36px;
+    -fx-fill: white;
+    -fx-font-weight: bold;
+}
+
+.welcome-pane{
+    -fx-background-color: linear-gradient(to bottom,#009688,#26A69A);
+}
+
+.app-subtitle{
+    -fx-font-size: 14px;
+    -fx-fill: white;
+}
+
+.welcome-login-btn{
+    -fx-background-color: white;
+    -fx-text-fill: #009688;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+
+    -fx-background-radius: 30;
+
+    -fx-padding: 10 40 10 40;
+
+    -fx-effect: dropshadow(
+            three-pass-box,
+            rgba(0,0,0,0.2),
+            10,
+            0,
+            0,
+            4
+    );
+}
+
+.welcome-login-btn:hover{
+    -fx-background-color: #e8f6f5;
+    -fx-cursor: hand;
+}
+
+.login-card{
+    -fx-background-color: white;
+    -fx-padding: 30;
+    -fx-background-radius: 15;
+
+    -fx-effect: dropshadow(
+            three-pass-box,
+            rgba(0,0,0,0.2),
+            20,
+            0,
+            0,
+            10
+    );
+}
+
+.login-title{
+    -fx-font-size: 22px;
+    -fx-fill: #009688;
+}
+
+.input-field{
+    -fx-background-color: transparent;
+    -fx-border-color: #26A69A;
+    -fx-border-width: 0 0 2 0;
+    -fx-padding: 8;
+}
+
+.input-field:focused{
+    -fx-border-color: #009688;
+}
+
+.login-btn{
+    -fx-background-color: #009688;
+    -fx-text-fill: white;
+    -fx-background-radius: 25;
+    -fx-font-size: 14px;
+}
+
+.login-btn:hover{
+    -fx-background-color: #26A69A;
+}
+
+.close-btn{
+    -fx-background-color: transparent;
+    -fx-text-fill: #009688;
+    -fx-font-size: 16px;
+}
+
+.forgot-link{
+    -fx-text-fill: #26A69A;
+}
+
+.error-label{
+    -fx-text-fill: #e53935;
+}

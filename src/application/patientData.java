@@ -15,11 +15,7 @@ public class patientData {
     private String status;
     private String prognosis;
 
-    public patientData(int patientId, String name, int age, String gender, String phoneNumber, String bloodGroup, String imagePath, LocalDate admissionDate, String status) {
-        this(patientId, name, age, gender, phoneNumber, bloodGroup, imagePath, admissionDate, status, null);
-    }
-
-    public patientData(int patientId, String name, int age, String gender, String phoneNumber, String bloodGroup, String imagePath, LocalDate admissionDate, String status, String prognosis) {
+     public patientData(int patientId, String name, int age, String gender, String phoneNumber, String bloodGroup, String imagePath, LocalDate admissionDate, String status, String prognosis) {
         this.patientId = patientId;
         this.name = name;
         this.age = age;

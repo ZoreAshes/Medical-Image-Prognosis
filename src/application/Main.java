@@ -26,6 +26,7 @@ public class Main extends Application {
         icon = new Image("application/Image.png");
         stage.getIcons().add(icon);
         stage.setTitle("Xpert");
+        scene.getStylesheets().add(getClass().getResource("login.css").toExternalForm());
         stage.setScene(scene);
         stage.show();
     }

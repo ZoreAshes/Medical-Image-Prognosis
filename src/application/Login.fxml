@@ -1,47 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.AmbientLight?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Hyperlink?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
-   <left>
-      <AnchorPane prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: #0965;" BorderPane.alignment="CENTER">
-         <children>
-            <AmbientLight color="CHARTREUSE" layoutY="1.0" lightOn="true" />
-         </children>
-      </AnchorPane>
-   </left>
-   <center>
-      <AnchorPane prefHeight="200.0" prefWidth="350.0" BorderPane.alignment="CENTER">
-         <children>
-            <TextField fx:id="usernameText" layoutX="99.0" layoutY="237.0" promptText="User Name" style="-fx-background-color: transparent; -fx-border-color: #0967; -fx-border-width: 0px 0px 2px 0px;" />
-            <PasswordField fx:id="passwordText" layoutX="99.0" layoutY="285.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #0967; -fx-border-width: 0px 0px 2px 0px;" />
-           <Button layoutX="142.0" layoutY="335.0" mnemonicParsing="false" onAction="#loginButton" style="-fx-background-color: #0967;" text="Login" textFill="WHITE" />
-            <Hyperlink layoutX="117.0" layoutY="417.0" text="Forgot Password?" />
-            <Text fill="#009966" layoutX="114.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Login">
-               <font>
-                  <Font size="23.0" />
-               </font>
-            </Text>
-            <Button layoutX="319.0" mnemonicParsing="false" onAction="#cancelbutton" opacity="0.5" style="-fx-background-color: #f7faf9;" text="X" textFill="#009966">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Button>
-            <Label fx:id="loginMessage" layoutX="67.0" layoutY="397.0" prefHeight="19.0" prefWidth="251.0" textAlignment="CENTER" textFill="#dc1919">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
-   </center>
-</BorderPane>
+<StackPane xmlns="http://javafx.com/javafx/25"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="application.Controller"
+           prefHeight="500"
+           prefWidth="700"
+           stylesheets="@login.css">
+
+    <BorderPane prefHeight="500" prefWidth="700">
+
+        <left>
+            <AnchorPane prefWidth="350" styleClass="left-pane">
+
+                <VBox alignment="CENTER"
+                      spacing="15"
+                      layoutX="90"
+                      layoutY="150">
+
+                    <Text text="⚕" styleClass="doctor-icon"/>
+                    <Text text="Xpert" styleClass="app-title"/>
+                    <Text text="Medical Management System"
+                          styleClass="app-subtitle"/>
+
+                </VBox>
+
+            </AnchorPane>
+        </left>
+
+        <center>
+            <AnchorPane prefWidth="350">
+
+                <Button layoutX="315"
+                        layoutY="10"
+                        text="X"
+                        onAction="#cancelbutton"
+                        styleClass="close-btn"/>
+
+                <VBox layoutX="70"
+                      layoutY="130"
+                      spacing="15"
+                      alignment="CENTER"
+                      styleClass="login-card">
+
+                    <Text text="User Login"
+                          styleClass="login-title"/>
+
+                    <TextField fx:id="usernameText"
+                               promptText="Username"
+                               prefWidth="200"
+                               styleClass="input-field"/>
+
+                    <PasswordField fx:id="passwordText"
+                                   promptText="Password"
+                                   prefWidth="200"
+                                   styleClass="input-field"/>
+
+                    <Button text="Login"
+                            prefWidth="160"
+                            onAction="#loginButton"
+                            styleClass="login-btn"/>
+
+                    <Label fx:id="loginMessage"
+                           prefWidth="200"
+                           textAlignment="CENTER"
+                           styleClass="error-label"/>
+
+                    <Hyperlink text="Forgot Password?"
+                               styleClass="forgot-link"/>
+
+                </VBox>
+
+            </AnchorPane>
+        </center>
+
+    </BorderPane>
+
+    <AnchorPane fx:id="welcomePane"
+                prefHeight="500"
+                prefWidth="700"
+                styleClass="welcome-pane">
+
+        <VBox alignment="CENTER"
+              spacing="20"
+              layoutX="200"
+              layoutY="150">
+
+            <Text text="⚕" styleClass="doctor-icon"/>
+
+            <Text text="Xpert"
+                  styleClass="app-title"/>
+
+            <Text text="Welcome to the Medical Management System"
+                  styleClass="app-subtitle"/>
+
+            <Button text="Login"
+                    styleClass="welcome-login-btn"
+                    onAction="#showLogin"
+                    prefWidth="220"
+                    prefHeight="45"/>
+
+        </VBox>
+
+    </AnchorPane>
+
+</StackPane>
